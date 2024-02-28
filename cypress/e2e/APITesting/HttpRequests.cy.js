@@ -7,7 +7,7 @@ describe("HTTP rEQUESTS", ()=>{
         .should('equal', 200);
     })
 
-
+    // Asserting POST API response
     it('Post Call', ()=>{
         cy.request({
 
@@ -23,10 +23,20 @@ describe("HTTP rEQUESTS", ()=>{
         .its('status')
         .should('equal', 201)
     })
-//    it('Demo', ()=>{
-//     cy.visit("https://www.google.com/")
-//     cy.get('#APjFqb').type('ABCDD').click();
-//    })
 
+    it('PUT', ()=>{
+        cy.request({
+            method: 'PUT',
+            url: 'https://jsonplaceholder.typicode.com/posts/1',
+            body: {
+                id: 1,
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+              }
+        })
+        .its('status')
+        .should('equal',200)
+    })
 
 })
