@@ -13,4 +13,13 @@ describe('This is suit for alerts',()=>{
         cy.get('#result').should('have.text','You successfully clicked an alert')
     })
 
+    it('2nd alert test',()=>{
+        cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
+        cy.contains('Click for JS Confirm').click();
+        cy.on('window:alert',(str)=>{
+            expect(str).equal('I am a JS Confirm');
+        })
+
+    })
+
 })
