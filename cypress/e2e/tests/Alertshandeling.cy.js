@@ -23,4 +23,14 @@ describe('This is suit for alerts',()=>{
         cy.get('#result').should('have.text', 'You clicked: Ok')
     })
 
+    it('3nd alert test',()=>{
+        cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
+        
+        cy.window().then(($win)=>{
+            cy.stub($win, 'prompt').returns("This is dummy text")
+            cy.contains('Click for JS Prompt').click()
+        })
+
+    })
+
 })
