@@ -4,8 +4,12 @@ describe('This is a suit',()=>{
 
     //Before, BeforeEach, After, AfterEach
     before(function(){
-        cy.visit('http://www.google.com')
-    })
+        cy.log('Before')   
+     })
+
+     beforeEach(function(){
+        cy.log('Before Each')   
+     })
 
     it('Test 1',()=>{
         cy.log('Test 1 executed')
