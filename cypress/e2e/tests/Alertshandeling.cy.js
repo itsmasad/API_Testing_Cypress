@@ -6,7 +6,8 @@ describe('This is suit for alerts',()=>{
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
         // cy.get(':nth-child(1) > button',{timeout:10000}).should('exist').should('have.text','Click for JS Alert');
         cy.get(':nth-child(1) > button').click({force:true});
-
+        
+        // Verifying if the alert have this string
         cy.on('window:alert', (str)=>{
             expect(str).equal('I am a JS Alert');
         })
@@ -15,11 +16,11 @@ describe('This is suit for alerts',()=>{
 
     it('2nd alert test',()=>{
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
+        // Clicking the alert
         cy.contains('Click for JS Confirm').click();
-        cy.on('window:alert',(str)=>{
-            expect(str).equal('I am a JS Confirm');
-        })
-
+        // Clicking the ok, and if we want to click cancel then we can write false instead of true
+        cy.on('window:confirm',()=>true)
+        cy.get('#result').should('have.text', 'You clicked: Ok')
     })
 
 })
