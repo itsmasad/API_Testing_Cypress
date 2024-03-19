@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('api_checks',(url)=>{
+    cy.request(url).as('req')
+    cy.get('@req').its('status').should('eq', 200)
+})
