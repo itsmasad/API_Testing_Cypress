@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-19T01:48:10.463Z",
+    "end": "2024-03-19T01:48:16.944Z",
+    "duration": 6481,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4cb12385-5d7d-4cbc-aef9-f412de439a6c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\checkBoxes.cy.js",
+      "file": "cypress\\e2e\\tests\\checkBoxes.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "482a4e74-b48e-43b5-b114-0b5284bd6ac5",
+          "title": "This is a suit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the checkbox functionality",
+              "fullTitle": "This is a suit verify the checkbox functionality",
+              "timedOut": null,
+              "duration": 3811,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/checkboxes');\ncy.get('#checkboxes > :nth-child(1)').check();\ncy.get('#checkboxes > :nth-child(3)').uncheck();",
+              "err": {},
+              "uuid": "78d00186-34d5-471e-9c99-87c8ab340104",
+              "parentUUID": "482a4e74-b48e-43b5-b114-0b5284bd6ac5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78d00186-34d5-471e-9c99-87c8ab340104"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3811,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
