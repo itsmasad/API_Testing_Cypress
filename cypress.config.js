@@ -5,6 +5,10 @@ module.exports = defineConfig({
   defaultCommandTimeout:10000,
   // This will wait 10 seconds to load the page
   pageLoadTimeout:10000,
+  // Setting viewport size
+  viewportHeight:890,
+  viewportWidth:424,
+
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
