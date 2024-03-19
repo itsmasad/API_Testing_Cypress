@@ -8,7 +8,7 @@ describe('this is suite',()=>{
 
     it('verify the element is present or not',()=>{
         cy.visit('https://www.google.com')
-        cy.get('#', { timeout: 10000 }).should('exist');
+        cy.get('#APjFqb',{ timeout: 10000 }).should('exist');
  
 
         cy.get('#APjFqb').type('Cypress')
