@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-31T22:21:45.768Z",
+    "end": "2024-03-31T22:21:56.596Z",
+    "duration": 10828,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8eda6d87-f80f-44d6-9270-06d827f031e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\demo.cy.js",
+      "file": "cypress\\e2e\\tests\\demo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e97a975-266f-4d83-8549-062a0de8fcd0",
+          "title": "this is suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify user is able to open google.com",
+              "fullTitle": "this is suite verify user is able to open google.com",
+              "timedOut": null,
+              "duration": 2962,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.google.com');",
+              "err": {},
+              "uuid": "e4ebcfeb-2d07-4c4f-b82d-c883ef0efa89",
+              "parentUUID": "3e97a975-266f-4d83-8549-062a0de8fcd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify the element is present or not",
+              "fullTitle": "this is suite verify the element is present or not",
+              "timedOut": null,
+              "duration": 2650,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.google.com');\ncy.get('#APjFqb', {\n  timeout: 10000\n}).should('exist');\ncy.get('#APjFqb').type('Cypress');\ncy.get('[value=\"Google Search\"]').eq(0).click({\n  force: true\n});",
+              "err": {},
+              "uuid": "b9736810-8926-4af8-9832-b66c3829fb70",
+              "parentUUID": "3e97a975-266f-4d83-8549-062a0de8fcd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e4ebcfeb-2d07-4c4f-b82d-c883ef0efa89",
+            "b9736810-8926-4af8-9832-b66c3829fb70"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
