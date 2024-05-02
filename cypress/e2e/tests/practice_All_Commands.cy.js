@@ -30,5 +30,7 @@ describe("This is a suit",()=>{
     })
     it('this is a test',()=>{
         cy.get('locator').select('Option 2')
+        // Take a screenshot and save it with a specific name
+        cy.screenshot('example-screenshot');
     })
 })
