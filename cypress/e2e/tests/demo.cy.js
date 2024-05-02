@@ -13,5 +13,7 @@ describe('this is suite',()=>{
 
         cy.get('#APjFqb').type('Cypress')
         cy.get('[value="Google Search"]').eq(0).click({force:true})
+        cy.get().
     });
 })
+
