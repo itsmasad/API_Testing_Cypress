@@ -28,4 +28,7 @@ describe("This is a suit",()=>{
         // Double Click
         cy.get('locator').dblclick()
     })
+    it('this is a test',()=>{
+        cy.get('locator').select('Option 2')
+    })
 })

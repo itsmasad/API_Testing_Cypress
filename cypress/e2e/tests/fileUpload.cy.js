@@ -7,6 +7,7 @@ describe('This is suit',()=>{
         cy.get('#file-upload').selectFile("C:/Users/Asad/Desktop/Document.txt");
         cy.get('#file-submit').click()
         cy.get('h3').should('exist').should('have.text','File Uploaded!')
+        .should('exist').should('have.text',"file uploaded").should('include')
     })
 
 })
