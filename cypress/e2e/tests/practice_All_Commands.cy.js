@@ -4,7 +4,10 @@ describe("This is a suit",()=>{
 
     it('this is a test',()=>{
         cy.visit('https://books.toscrape.com/index.html')
-        // cy.get('locator',{timeout:10000}).type('Cypress')
+        // Typing in search bar
+        cy.get('locator',{timeout:10000}).type('Cypress')
+        // Get the title of the page
+        cy.title().should('include', 'Expected Title'); // Replace 'Expected Title' with the title you're expecting
         cy.url().should('include','index.html')
         // Right Click
         cy.get('locator').rightclick()
